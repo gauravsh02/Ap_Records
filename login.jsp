@@ -9,7 +9,18 @@
     </head>
     
     <body>
-        <h1>Hello World!</h1>
+        
+        <% 
+        String z=(String) session.getAttribute("uid");
+        if(z!=null){
+        %>
+        <jsp:forward page="view_records.jsp"  />
+        <%
+            }
+         %>
+        
+        
+        
         <%!
             String s1="",s2="",name="", uid="";
         %>

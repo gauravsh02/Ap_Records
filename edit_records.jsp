@@ -13,23 +13,80 @@
         <link href="css/bootstrap.css"  rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <%= (String) session.getAttribute("name") %>
-        <h1>Edit Records!</h1>
+        
+        <% 
+        String z=(String) session.getAttribute("uid");
+        if(z==null){
+        %>
+        <jsp:forward page="index.jsp"  />
+        <%
+            }
+         %>
+        
+        <div class="container">
+         <div class=' navbar navbar-default navbar-fixed-top'>
+        <div class="container">
+           <div class="navbar-header">
+                <button type='button' class="navbar-toggle" data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Toggle Navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                </button>
+               <a href ="view_records.jsp" class='navbar-brand'>Applied !</a>
+            </div>    
+                 
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                       <li><a href="view_records.jsp">Home</a></li>
+                       <li class="active"><a href="edit_records.jsp">Edit</a></li>
+                       <li><a href="about.jsp">About</a></li>
+                       <li><a href="logout.jsp">Logout</a></li>
+                    </ul>
+                </div>
+        </div> 
+    </div>        
+        
+        
+        
+        
+        
+            <div class="text-center"><br><br>   
+        <h2>Welcome <%= (String) session.getAttribute("name") %> </h2>
+        <h4>Edit Records.</h4></div>
+        
+         <div class="well">        
+            <table class="table-responsive table table-striped">
+            <tr>
+                <th>Company</th>
+                <th>Date</th>
+                <th>Position</th>
+                <th>Extra</th>
+                <th>Phone No.</th>
+                <th>Email id</th>
+                <th>Option</th>
+            </tr>
+            
         <%
         try{
                 ResultSet rs= st.executeQuery("select * from details where id='"+(String) session.getAttribute("uid")+"'");
                 while(rs.next()) {  %>
-                <%=rs.getString(2)%><br>
-                <%=rs.getString(3)%><br>
-                <%=rs.getString(4)%><br>
-                <%=rs.getString(5)%><br>
-                <%=rs.getString(6)%><br>
-                <%=rs.getString(7)%><br>
-                <a href="edit_records1.jsp?did=<%=rs.getString(2)%>">Edit</a><br><br>
+                <tr>
+                <td><%=rs.getString(3)%></td>
+                <td><%=rs.getString(4)%></td>
+                <td><%=rs.getString(5)%></td>
+                <td><%=rs.getString(6)%></td>
+                <td><%=rs.getString(7)%></td>
+                <td><%=rs.getString(8)%></td>
+                <td><a href="edit_records1.jsp?did=<%=rs.getString(2)%>"><button class="btn btn-primary" >Edit</button></a></td>
+                </tr>
         <%
                 }       
             con.close();
             }catch(Exception e){   out.print(e);   }   %>
+        </table>
+        </div>
         
+        </div>
     </body>
 </html>

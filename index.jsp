@@ -9,11 +9,21 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Applied !</title>
+        <title>LogIn Applied !</title>
       <link href="css/bootstrap.css"  rel="stylesheet" type="text/css" />  
         
     </head>
     <body>
+        
+        <% 
+        String z=(String) session.getAttribute("uid");
+        if(z!=null){
+        %>
+        <jsp:forward page="view_record.jsp"  />
+        <%
+            }
+         %>
+        
         <div class="container">
         <div class=' navbar navbar-default navbar-fixed-top'>
         <div class="container">
@@ -24,13 +34,12 @@
                 <span class='icon-bar'></span>
                 <span class='icon-bar'></span>
                 </button>
-            </div>    
-                <a href ="" class='navbar-brand'>Applied !</a> 
+               <a href ="index.jsp" class='navbar-brand'>Applied !</a>
+            </div>     
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                       <li class="active"><a href="">Home</a></li>
-                       
-                       <li><a href="">About</a></li>
+                       <li class="active"><a href="index.jsp">Home</a></li>
+                       <li><a href="about.jsp">About</a></li>
                     </ul>
                 </div>
             
@@ -41,7 +50,7 @@
         <div class="container" style="padding-top: 10%;" >
         <div class="well">
         <div class="row">
-            <h1 class="text-center">Applied !</h1><br>
+            <h1 class="col-xs-offset-4">LogIn Applied !</h1><br>
         <form action="login.jsp" >
             <div class="row"> 
                 <div class="col-xs-offset-4 col-xs-3"><label>User Id </label><input class="form-control" type="text" name="id" placeholder="Username"></div>

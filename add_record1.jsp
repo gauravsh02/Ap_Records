@@ -13,8 +13,37 @@
         <link href="css/bootstrap.css"  rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <h1>Add Records!</h1>
-        
+        <% 
+        String z=(String) session.getAttribute("uid");
+        if(z==null){
+        %>
+        <jsp:forward page="index.jsp"  />
+        <%
+            }
+         %>
+         <div class="container">
+        <div class=' navbar navbar-default navbar-fixed-top'>
+        <div class="container">
+           <div class="navbar-header">
+                <button type='button' class="navbar-toggle" data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Toggle Navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                </button>
+            </div>    
+                <a href ="" class='navbar-brand'>Applied !</a> 
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                       <li class="active"><a href="">Home</a></li>
+                       
+                       <li><a href="">About</a></li>
+                    </ul>
+                </div>
+            
+        </div> 
+    </div>
+                   <div class="well">
         <% 
          try{
              ResultSet rs=st.executeQuery("select max(did) from details");
@@ -24,7 +53,7 @@
              
              did+=1;
              } 
-            String id=(String)session.getAttribute("id");
+            String id=(String)session.getAttribute("uid");
             String company=request.getParameter("company");
             String date=request.getParameter("date");
             String position=request.getParameter("position");
@@ -33,16 +62,16 @@
             String email=request.getParameter("email");
             
             st.executeUpdate("insert into details value ( '"+id+"','"+did+"', '"+company+"', '"+date+"', '"+position+"', '"+extra+"', '"+phno+"', '"+email+"' ) ");
-            out.print("<font color=green size=2>Added Successfully.</font>");
+            out.print("<br><br><h2>Added Successfully, Go Back Home.</h2>");
         %>
-        
+        <jsp:forward page="view_records.jsp"  />
         
         <% 
             con.close();
             }catch(Exception e){ out.print(e); }
         %>
         
-        
-        
+                   </div>
+               </div>   
     </body>
 </html>

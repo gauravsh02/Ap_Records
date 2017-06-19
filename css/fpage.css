@@ -7,12 +7,20 @@ and open the template in the editor.
     Created on : Jun 18, 2017, 7:51:13 PM
     Author     : Gaurav Shankar
 */
-.spage{
-    background-position: center;
-    background-size: cover; 
+body{
+    background-position: inherit;
+    background-size: cover;
+    background-image:url(../pic/backq.jpg) ;
 }
 
 #pod{
     text-align: center;
-    padding-top: 50%;
+    padding-top: 15%;
+    font-size: 35px;
+    color: whitesmoke;
+}
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: #ccc;
+  color: #ccc;
 }
