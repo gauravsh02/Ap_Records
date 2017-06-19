@@ -63,29 +63,29 @@
                  
                  <div class="row"><br>
                      <div class="col-xs-4  col-xs-offset-2"> 
-                         <div class=" form-group"><label>company &nbsp;</label><input class="form-control" type="text" name="company" placeholder="Compsny Name"></div>
+                         <div class=" form-group"><label>company &nbsp;</label><input class="form-control" type="text" name="company" placeholder="Compsny Name" required ></div>
                      </div>
                      <div class="col-xs-3>">
-                         <div class=" form-group"><label>date &nbsp;</label><input class="form-control" type="date" name="date" ></div>
+                         <div class=" form-group"><label>date &nbsp;</label><input class="form-control" type="date" name="date" required ></div>
                      </div>    
                  </div>
                      
                      <div class="row"><br>
                      <div class="col-xs-4  col-xs-offset-2"> 
                   
-                         <div class=" form-group"><label>Position &nbsp;&nbsp;<input class="form-control" type="text" name="position" placeholder="Position"></div>
+                         <div class=" form-group"><label>Position &nbsp;&nbsp;<input class="form-control" type="text" name="position" placeholder="Position" required ></div>
                      </div>
                       <div class="col-xs-3>">
-                          <div class=" form-group"><label>extra &nbsp;</label><input class="form-control" type="text" name="extra" placeholder="Extra Info"></div>
+                          <div class=" form-group"><label>extra &nbsp;</label><input class="form-control" type="text" name="extra" placeholder="Extra Info" required ></div>
                       </div>   
                  </div>
                       <div class="row"><br>
                      <div class="col-xs-4  col-xs-offset-2">
                   
-                         <div class=" form-group"><label>Phone no.&nbsp;</label><input class="form-control" type="text" name="phno" placeholder="Phone no."></div>
+                         <div class=" form-group"><label>Phone no.&nbsp;</label><input class="form-control" type="text" name="phno" placeholder="Phone no." required pattern="(?=.*\d).{10,10}" ></div>
                      </div>
                       <div class="col-xs-3>">
-                         <div class=" form-group"><label>email &nbsp;</label><input class="form-control" type="text" name="email" placeholder="Email id."></div>
+                          <div class=" form-group"><label>email &nbsp;</label><input class="form-control" type="email" name="email" placeholder="Email id." required ></div>
                       </div>   
                   </div>
                       <div class="row">

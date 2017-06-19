@@ -63,29 +63,29 @@
                  <input type="hidden" name="did" value="<%= s1 %>">
                  <div class="row"><br>
                      <div class="col-xs-4  col-xs-offset-2"> 
-                         <div class=" form-group"><label>company &nbsp;</label><input class="form-control" type="text" name="company" placeholder="<%= rs.getString(3) %>"></div>
+                         <div class=" form-group"><label>company &nbsp;</label><input class="form-control" type="text" name="company" value="<%= rs.getString(3) %>" required></div>
                      </div>
                      <div class="col-xs-3>">
-                         <div class=" form-group"><label>date &nbsp;</label><input class="form-control" type="date" name="date"></div>
+                         <div class=" form-group"><label>date &nbsp;</label><input class="form-control" type="date" name="date" required ></div>
                      </div>    
                  </div>
                      
                      <div class="row"><br>
                      <div class="col-xs-4  col-xs-offset-2"> 
                   
-                         <div class=" form-group"><label>Position &nbsp;&nbsp;</label><input class="form-control" type="text" name="position" placeholder="<%= rs.getString(5) %>"></div>
+                         <div class=" form-group"><label>Position &nbsp;&nbsp;</label><input class="form-control" type="text" name="position" value="<%= rs.getString(5) %>" required ></div>
                      </div>
                       <div class="col-xs-3>">
-                          <div class=" form-group"><label>extra &nbsp;</label><input class="form-control" type="text" name="extra" placeholder="<%= rs.getString(6) %>"></div>
+                          <div class=" form-group"><label>extra &nbsp;</label><input class="form-control" type="text" name="extra" value="<%= rs.getString(6) %>" required ></div>
                       </div>   
                  </div>
                       <div class="row"><br>
                      <div class="col-xs-4  col-xs-offset-2">
                   
-                         <div class=" form-group"><label>Phone no.&nbsp;</label><input class="form-control"  type="text" name="phno" placeholder="<%= rs.getString(7) %>"></div>
+                         <div class=" form-group"><label>Phone no.&nbsp;</label><input class="form-control"  type="text" name="phno" value="<%= rs.getString(7) %>" required pattern="(?=.*\d).{10,10}" ></div>
                      </div>
                       <div class="col-xs-3>">
-                         <div class=" form-group"><label>email &nbsp;</label><input class="form-control" type="text" name="email" placeholder="<%= rs.getString(8) %>"></div>
+                          <div class=" form-group"><label>email &nbsp;</label><input class="form-control" type="email" name="email" value="<%= rs.getString(8) %>" required ></div>
                       </div>   
                   </div>
                       <div class="row">

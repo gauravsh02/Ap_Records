@@ -53,9 +53,9 @@
             <h1 class="col-xs-offset-4">LogIn Applied !</h1><br>
         <form action="login.jsp" >
             <div class="row"> 
-                <div class="col-xs-offset-4 col-xs-3"><label>User Id </label><input class="form-control" type="text" name="id" placeholder="Username"></div>
+                <div class="col-xs-offset-4 col-xs-3"><label>User Id </label><input class="form-control" type="email" name="id" placeholder="Email Id" required ></div>
             
-            <div class="col-xs-offset-4 col-xs-3"><label>Password </label><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                <div class="col-xs-offset-4 col-xs-3"><label>Password </label><input class="form-control" type="password" name="password" placeholder="Password" required ></div>
             <br>
             <div class="col-xs-offset-4 col-xs-3"><br><button class="btn btn-default btn-primary" type="submit">Submit</button></div>
            </div>
